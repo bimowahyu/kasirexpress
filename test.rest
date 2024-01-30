@@ -1,0 +1,100 @@
+
+POST http://localhost:1001/users
+Content-Type: application/json
+
+{
+    "name": "bimouser",
+    "email": "user@gmail.com",
+    "password": "12345",
+    "confPassword":"12345",
+    "role":"user"
+   
+
+}
+
+###
+GET  HTTP://localhost:1001/users/
+###
+PATCH  HTTP://localhost:1001/users/c819598f-ad5e-49a9-a05a-da8d7f114239
+Content-Type: application/json
+
+
+{
+    "name": "updatetest",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+
+}
+###
+DELETE HTTP://localhost:1001/users/c819598f-ad5e-49a9-a05a-da8d7f114239
+
+###
+POST http://localhost:1001/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:1001/login
+Content-Type: application/json
+
+{
+    "email": "",
+    "password": ""
+}
+
+
+###
+POST http://localhost:1001/login
+Content-Type: application/json
+
+{
+    "email": "user3@gmail.com",
+    "password": "12345"
+}
+
+###
+GET http://localhost:1001/me
+
+###
+DELETE http://localhost:1001/logout
+
+
+###
+GET http://localhost:1001/products
+
+###
+POST http://localhost:1001/products
+Content-Type: application/json
+
+{
+    "name": "productbaruadmin",
+    "price": "1000"
+}
+
+//mendapatkan data yang di input user melalui akun admin
+###
+GET http://localhost:1001/products/c82b0c7e-6c99-4ed9-b921-a6c545bad23d
+
+//test akun user 
+###
+GET http://localhost:1001/products/65c6544b-2890-412b-a4e4-9421b99d3c20
+
+###
+PATCH  http://localhost:1001/products/65c6544b-2890-412b-a4e4-9421b99d3c20
+Content-Type: application/json
+
+{
+    "name": "productupdateuser",
+    "price": "2000"
+}
+
+###
+DELETE   http://localhost:1001/products/eddadcbe-6113-44c5-ad92-4fdd5d19c529
+
+
