@@ -7,14 +7,14 @@ import ProductModel from "./ProductModel.js"// Import model Produk
 const { DataTypes } = Sequelize;
 
 const PenjualanDetail = db.define('penjualan_detail', {
-    uuid: {
-        type: DataTypes.STRING,
-        defaultValue: DataTypes.UUIDV4,
-        allowNull: false,
-        validate: {
-            notEmpty: true
-        }
-    },
+    // uuid: {
+    //     type: DataTypes.STRING,
+    //     defaultValue: DataTypes.UUIDV4,
+    //     allowNull: false,
+    //     validate: {
+    //         notEmpty: true
+    //     }
+    // },
     id_penjualan: {
         type: DataTypes.INTEGER,
         allowNull: false,

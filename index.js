@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import fileUpload from "express-fileupload";
 import session from "express-session";
 import dotenv from "dotenv";
 import db from "./config/database.js";
@@ -49,6 +50,8 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(fileUpload()); 
+app.use(express.static("public"));
 app.use(UserRoute);
 app.use(ProductRoute);
 app.use(AuthRoute);
